@@ -10,9 +10,9 @@ fs.readdir(path.join(__dirname, '//secret-folder'), (err, files) => {
         } else {
           if (stats.isFile()) {
             console.log(
-              `${file.split('.')[0]} - ${path.extname(
-                path.join(__dirname, '//secret-folder', file),
-              ).replace('.', '')} - ${`${parseFloat(stats.size) / 1024}kb`}`,
+              `${file.split('.')[0]} - ${path
+                .extname(path.join(__dirname, '//secret-folder', file))
+                .replace('.', '')} - ${`${parseFloat(stats.size) / 1024}kb`}`,
             );
           }
         }
